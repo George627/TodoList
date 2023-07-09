@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(209, 255, 240);
+    font-family: 'Courgette', cursive;
+    color: rgb(49, 49, 49);
+}
+
+.button{
+    margin-top: 15px;
+    
+}
+
+.container{
+    align-content: center;
+
+    height: 100vh;
+
+    margin-left: 20px;
+}
+
+
+h3{
+    margin-top: 20px;
+}
+
+li:hover{
+    color: red;
+}
+
