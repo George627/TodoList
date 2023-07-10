@@ -1,4 +1,4 @@
 # TodoList
 A to do list website.
-This is a to do list website. To use it, you would type what you want to be added in the list in the textbox, and you type the same thing then the delete button to erase
-it from the list.
+This is a to do list website. Type whatever you want then click the "Add" button or enter to place it on the list.
+If you need to delete a item, click the item or type it in the textbox then click the "Delete" button.
