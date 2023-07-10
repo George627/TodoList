@@ -17,12 +17,24 @@ var list = document.querySelector("ul");
 //variable on line 7.
 addButton.addEventListener("click", function(){
 
-    //A new "list item" variable is created.
-    var item = document.createElement("li"); 
-    item.appendChild(document.createTextNode(newItem.value));
+    //If statement that will not allow the user to add nothing.
+    if(newItem.value.length > 0){
+       
+        //Method that adds the item to the list.
+        itemAdded();
+     }
+})
+
+
+newItem.addEventListener("keypress", function(event){
     
-    //Adds item to the list.
-    list.appendChild(item);
+    //If statement that will not allow the user to add nothing.
+    //Also takes the enter key to add list items.
+    if(newItem.value.length > 0 && event.key === 'Enter'){
+       
+        //Method that adds the item to the list.
+        itemAdded();
+    }   
 })
 
 
@@ -36,30 +48,33 @@ deleteButton.addEventListener("click", function(){
     var answer = isEqual(list.children, newItem);
 
 
-    //A placeholder that keeps track of the number of items is in the list.
-    var placeholder = list.children;
-
-
     //If statement that checks if the answer variable is true or false.
     //If true, then the item will be removed from the list.
     //If false, then a statement will be printed in the console log.
-    if(answer){
-    
-        
-        //A for-loop that searches for the word in the list.
-        //Once found, the word will be removed from the list.
-        for(var i = 0; i < placeholder.length; i++){
-            if(placeholder[i].innerHTML === newItem.value){
-                list.removeChild(list.children[i]);
-            }
-        }
+    if(answer){    
+        removeItem()
     }
 
     else{
         console.log("Cant remove item or item doesn't exist.");
     }
     
+    //Clears textbox.
+    newItem.value = "";
 })
+
+
+list.addEventListener("click", function(event){
+	
+    //Create so that by clicking the item, a item from the list will be removed.
+	if(event.target.tagName === "LI"){
+
+        //Uses the done class to erase the item from the list.
+		event.target.classList.toggle("done");
+	}
+})
+
+
 
 //Function that checks to see if the user's input is in the list.
 function isEqual(array, ans){
@@ -73,3 +88,32 @@ function isEqual(array, ans){
     return false;
 }
 
+function itemAdded(){
+    
+    //A new "list item" variable is created.
+    var item = document.createElement("li"); 
+    item.appendChild(document.createTextNode(newItem.value));
+    
+    //Adds item to the list.
+    list.appendChild(item);
+
+
+    //Clears textbox.
+    newItem.value = "";
+
+}
+
+function removeItem(){
+    //A for-loop that searches for the word in the list.
+    //Once found, the word will be removed from the list.
+    
+    //A placeholder that keeps track of the number of items is in the list.
+    
+    var placeholder = list.children;
+    
+    for(var i = 0; i < placeholder.length; i++){
+        if(placeholder[i].innerHTML === newItem.value){
+            list.removeChild(list.children[i]);
+        }
+    }
+}
