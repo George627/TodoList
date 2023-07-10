@@ -23,6 +23,9 @@ addButton.addEventListener("click", function(){
         //Method that adds the item to the list.
         itemAdded();
      }
+
+    //Clears textbox.
+    newItem.value = "";
 })
 
 
@@ -34,7 +37,10 @@ newItem.addEventListener("keypress", function(event){
        
         //Method that adds the item to the list.
         itemAdded();
-    }   
+    }
+
+    //Clears textbox.
+    newItem.value = "";
 })
 
 
@@ -96,11 +102,6 @@ function itemAdded(){
     
     //Adds item to the list.
     list.appendChild(item);
-
-
-    //Clears textbox.
-    newItem.value = "";
-
 }
 
 function removeItem(){
