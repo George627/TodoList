@@ -26,3 +26,10 @@ li:hover{
     color: red;
 }
 
+.done{
+    visibility: hidden;
+
+    height: 0;
+
+    width: 0;
+}
