@@ -1,0 +1,11 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "A to do list website.\r This is a to do list website. Type whatever you want then click the \"Add\" button or enter to place it on the list.\r If you need to delete a item, click the item or type it in the textbox then click the \"Delete\" button.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

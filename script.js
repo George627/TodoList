@@ -39,8 +39,7 @@ newItem.addEventListener("keypress", function(event){
         itemAdded();
     }
 
-    //Clears textbox.
-    newItem.value = "";
+    
 })
 
 
