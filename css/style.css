@@ -10,7 +10,7 @@ body{
 }
 
 .container{
-    align-content: center;
+    align-content: start;
 
     height: 100vh;
 
