@@ -37,8 +37,10 @@ newItem.addEventListener("keypress", function(event){
        
         //Method that adds the item to the list.
         itemAdded();
-    }
 
+	//Clears textbox.
+    	newItem.value = "";
+    }
     
 })
 
